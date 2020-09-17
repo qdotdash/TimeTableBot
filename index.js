@@ -51,17 +51,17 @@ client.on('ready', () => {
 
 
   cron.schedule("* * * * *", function() {
-    const channel = client.channels.cache.get('756284704910475305');
+    const channel = client.channels.cache.get('756287063292117022');
     var d = new Date();
     var n = d.getDay()
     var timestring = d.getHours()+":"+d.getMinutes();
-    if(timestring=="4:23"){
+    if(timestring=="4:32"){
       channel.send(timetablearray[n-1][0].message);
     }
-    else if(timestring=="4:24"){
+    else if(timestring=="4:33"){
       channel.send(timetablearray[n-1][1].message);
     }
-    else if(timestring=="4:25"){
+    else if(timestring=="4:25"){  
       channel.send(timetablearray[n-1][2].message);
     }
     else if(timestring=="4:26"){
