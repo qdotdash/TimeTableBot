@@ -18,7 +18,7 @@ client.on('ready', () => {
 
   cron.schedule("* * * * *", function() {
     const channel = client.channels.cache.get('756049115267465256');
-    channel.send('Chinnappettan nattilund moleee nee vaa');
+    channel.send('Test on Heroku');
 
 //     const user = <client>.users.cache.get('<id>');
 // user.send('<content>'); send dm 752835857081303052
