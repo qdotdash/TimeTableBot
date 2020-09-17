@@ -9,23 +9,24 @@ const cron = require("node-cron");
     app = express();
 
 
-    
+    var num = 0;
 
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
   });
 
-  cron.schedule("* * * * *", function() {
+  cron.schedule("5 * * * * *", function() {
     const channel = client.channels.cache.get('756049115267465256');
-    channel.send('Test on Heroku');
+    channel.send('Test on Heroku' + num);
+    num += 1;
 
 //     const user = <client>.users.cache.get('<id>');
 // user.send('<content>'); send dm 752835857081303052
   });
 
 
-  
+  //lower case this case insensitive
   client.on('message', msg => {
     if (msg.content === 'go to cns') {
       msg.reply('https://meet.google.com/iyc-stko-ycn');
