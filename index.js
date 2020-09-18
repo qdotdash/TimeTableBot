@@ -124,25 +124,25 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
       var minutes = indiaTime.getMinutes();
       if(n!=6&&n!=7){
         if(tominutes(hours, minutes)>tominutes(8, 30)&&tominutes(hours, minutes)<=tominutes(9,30)){
-          channel.send("Current class : " + timetablearray[n-1][0].message);
+          msg.reply("Current class : " + timetablearray[n-1][0].message);
         }
         else if(tominutes(hours, minutes)>tominutes(9, 30)&&tominutes(hours, minutes)<=tominutes(10,30)){
-          channel.send("Current class : " + timetablearray[n-1][1].message);
+          msg.reply("Current class : " + timetablearray[n-1][1].message);
         }
         else if(tominutes(hours, minutes)>tominutes(10, 30)&&tominutes(hours, minutes)<=tominutes(11,30)){
-          channel.send("Current class : " + timetablearray[n-1][2].message); 
+          msg.reply("Current class : " + timetablearray[n-1][2].message); 
         }
         else if(tominutes(hours, minutes)>tominutes(11, 30)&&tominutes(hours, minutes)<=tominutes(12,30)){
-          channel.send("Current class : " + timetablearray[n-1][3].message);
+          msg.reply("Current class : " + timetablearray[n-1][3].message);
         }
         else if(tominutes(hours, minutes)>tominutes(12, 30)&&tominutes(hours, minutes)<=tominutes(13,30)){
-          channel.send("Current class : " + timetablearray[n-1][4].message);
+          msg.reply("Current class : " + timetablearray[n-1][4].message);
         }
         else if(tominutes(hours, minutes)>tominutes(14, 0)&&tominutes(hours, minutes)<=tominutes(19,0)){//change this
-          channel.send("Current class : " + timetablearray[n-1][5].message);
+          msg.reply("Current class : " + timetablearray[n-1][5].message);
         }
         else{
-          channel.send("Class hours are over, I need to take a nap")
+          msg.reply("Class hours are over, I need to take a nap")
         }
       }
   }
