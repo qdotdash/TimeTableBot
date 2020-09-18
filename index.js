@@ -61,23 +61,26 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
 
     var n = indiaTime.getDay()
     var timestring = indiaTime.getHours()+":"+indiaTime.getMinutes();
-    if(timestring=="15:29"){
-      channel.send(timetablearray[n-1][0].message);
+    if(timestring=="16:0"){
+      channel.send("testing, Hour 1: " + timetablearray[n-1][0].message);
     }
-    else if(timestring=="15:31"){
-      channel.send(timetablearray[n-1][1].message);
+    else if(timestring=="15:55"){
+      channel.send("Hey, This is TimeTableRobot, I will notify you in time with the google meet links when it is time for your class, Have a wonderful day");
     }
-    else if(timestring=="15:32"){  
-      channel.send(timetablearray[n-1][2].message); 
+    else if(timestring=="17:0"){
+      channel.send("testing, Hour 2: " + timetablearray[n-1][1].message);
     }
-    else if(timestring=="15:33"){
-      channel.send(timetablearray[n-1][3].message);
+    else if(timestring=="18:0"){  
+      channel.send("testing, Hour 3: " + timetablearray[n-1][2].message); 
     }
-    else if(timestring=="15:34"){
-      channel.send(timetablearray[n-1][4].message);
+    else if(timestring=="19:0"){
+      channel.send("testing, Hour 4: " + timetablearray[n-1][3].message);
     }
-    else if(timestring=="15:35"){
-      channel.send(timetablearray[n-1][5].message);
+    else if(timestring=="20:0"){
+      channel.send("testing, Hour 5: " + timetablearray[n-1][4].message);
+    }
+    else if(timestring=="20:30"){
+      channel.send("testing, Hour 6: " + timetablearray[n-1][5].message);
     }
 //     const user = <client>.users.cache.get('<id>');
 // user.send('<content>'); send dm 752835857081303052
@@ -86,6 +89,7 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
 
   //lower case this case insensitive
   client.on('message', msg => {
+    msg = msg.toLowerCase();
     if (msg.content === 'go to cns') {
       msg.reply('https://meet.google.com/iyc-stko-ycn');
     }
