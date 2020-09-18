@@ -51,7 +51,7 @@ client.on('ready', () => {
 
 
   cron.schedule("* * * * *", function() {
-    const channel = client.channels.cache.get('756397267413368913');
+    const channel = client.channels.cache.get('756451422069063711');
 
     var currentTime = new Date();
 
@@ -61,22 +61,22 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
 
     var n = indiaTime.getDay()
     var timestring = indiaTime.getHours()+":"+indiaTime.getMinutes();
-    if(timestring=="15:12"){
+    if(timestring=="15:29"){
       channel.send(timetablearray[n-1][0].message);
     }
-    else if(timestring=="15:15"){
+    else if(timestring=="15:31"){
       channel.send(timetablearray[n-1][1].message);
     }
-    else if(timestring=="15:17"){  
-      channel.send(timetablearray[n-1][2].message);
+    else if(timestring=="15:32"){  
+      channel.send(timetablearray[n-1][2].message); 
     }
-    else if(timestring=="15:19"){
+    else if(timestring=="15:33"){
       channel.send(timetablearray[n-1][3].message);
     }
-    else if(timestring=="15:20"){
+    else if(timestring=="15:34"){
       channel.send(timetablearray[n-1][4].message);
     }
-    else if(timestring=="15:23"){
+    else if(timestring=="15:35"){
       channel.send(timetablearray[n-1][5].message);
     }
 //     const user = <client>.users.cache.get('<id>');
