@@ -70,16 +70,16 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
     else if(timestring=="16:33"){
       channel.send("testing, Hour 2: " + timetablearray[n-1][1].message);
     }
-    else if(timestring=="18:0"){  
+    else if(timestring=="17:0"){  
       channel.send("testing, Hour 3: " + timetablearray[n-1][2].message); 
     }
-    else if(timestring=="19:0"){
+    else if(timestring=="18:0"){
       channel.send("testing, Hour 4: " + timetablearray[n-1][3].message);
     }
-    else if(timestring=="20:0"){
+    else if(timestring=="19:0"){
       channel.send("testing, Hour 5: " + timetablearray[n-1][4].message);
     }
-    else if(timestring=="20:30"){
+    else if(timestring=="19:30"){
       channel.send("testing, Hour 6: " + timetablearray[n-1][5].message);
     }
 //     const user = <client>.users.cache.get('<id>');
@@ -111,7 +111,32 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
         msg.reply('http://meet.google.com/zvg-pobm-piz');
     }
     else if(msg.content === 'current class'){
-      msg.reply('Under construction');
+      var currentTime = new Date();
+      var ISTOffset = 330;   // IST offset UTC +5:30 
+      var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
+      var n = indiaTime.getDay()
+      var timestring = indiaTime.getHours()+":"+indiaTime.getMinutes();
+      if(timestring=="16:20"){
+        channel.send("testing, Hour 1: " + timetablearray[n-1][0].message);
+      }
+      else if(timestring=="16:0"){
+        channel.send("Hey, This is TimeTableRobot, I will notify you in time with the google meet links when it is time for your class, Have a wonderful day");
+      }
+      else if(timestring=="16:33"){
+        channel.send("testing, Hour 2: " + timetablearray[n-1][1].message);
+      }
+      else if(timestring=="17:0"){  
+        channel.send("testing, Hour 3: " + timetablearray[n-1][2].message); 
+      }
+      else if(timestring=="18:0"){
+        channel.send("testing, Hour 4: " + timetablearray[n-1][3].message);
+      }
+      else if(timestring=="19:0"){
+        channel.send("testing, Hour 5: " + timetablearray[n-1][4].message);
+      }
+      else if(timestring=="19:30"){
+        channel.send("testing, Hour 6: " + timetablearray[n-1][5].message);
+      }
   }
     
 
