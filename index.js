@@ -61,7 +61,7 @@ client.on('ready', () => {
 
 
   cron.schedule("* * * * *", function() {
-    const channel = client.channels.cache.get('756451422069063711');
+    const channel = client.channels.cache.get('756397267413368913');
 
     var currentTime = new Date();
 
@@ -73,22 +73,22 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
     var timestring = indiaTime.getHours()+":"+indiaTime.getMinutes();
     
     if(n!=6&&n!=7){
-      if(timestring=="8:30"){
+      if(timestring=="18:25"){
         channel.send(weekday[indiaTime.getDay()-1] + ", Hour 1: " + timetablearray[n-1][0].message);
       }
-      else if(timestring=="9:30"){
+      else if(timestring=="18:30"){
         channel.send("Hour 2: " + timetablearray[n-1][1].message);
       }
-      else if(timestring=="10:30"){  
+      else if(timestring=="18:35"){  
         channel.send("Hour 3: " + timetablearray[n-1][2].message); 
       }
-      else if(timestring=="11:30"){
+      else if(timestring=="18:40"){
         channel.send("Hour 4: " + timetablearray[n-1][3].message);
       }
-      else if(timestring=="12:30"){
+      else if(timestring=="18:45"){
         channel.send("Hour 5: " + timetablearray[n-1][4].message);
       }
-      else if(timestring=="14:0"){
+      else if(timestring=="18:50"){
         channel.send("Hour 6: " + timetablearray[n-1][5].message);
       }
     }
@@ -105,25 +105,25 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
   client.on('message', msg => {
     var messagestring = msg.content.toLowerCase();
     if (messagestring === 'go to cns') {
-      msg.reply('https://meet.google.com/iyc-stko-ycn');
+      msg.reply(cns.message);
     }
     else if(messagestring === 'go to ml'){
-        msg.reply('https://meet.google.com/dni-bzrr-war');
+        msg.reply(ml.message);
     }
     else if(messagestring === 'go to cg'){
-        msg.reply('https://meet.google.com/odp-ayya-trc');
+        msg.reply(cg.message);
     }
     else if(messagestring === 'go to csa'){
-        msg.reply('http://meet.google.com/aan-gzyr-xin');
+        msg.reply(csa.message);
     }
     else if(messagestring === 'go to dc'){
-        msg.reply('http://meet.google.com/shm-xotx-ydd');
+        msg.reply(dc.message);
     }
     else if(messagestring === 'go to dip'){
-        msg.reply('https://meet.google.com/rcm-cdom-hwh');
+        msg.reply(dip.message);
     }
     else if(messagestring === 'go to lab'){
-        msg.reply('http://meet.google.com/zvg-pobm-piz');
+        msg.reply(lab.message);
     }
     else if(messagestring === 'current class'){
       var currentTime = new Date();
@@ -133,22 +133,22 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
       var hours = indiaTime.getHours();
       var minutes = indiaTime.getMinutes();
       if(n!=6&&n!=7){
-        if(tominutes(hours, minutes)>tominutes(8, 30)&&tominutes(hours, minutes)<=tominutes(9,30)){
+        if(tominutes(hours, minutes)>tominutes(18, 25)&&tominutes(hours, minutes)<=tominutes(18,30)){
           msg.reply("Current class : " + timetablearray[n-1][0].message);
         }
-        else if(tominutes(hours, minutes)>tominutes(9, 30)&&tominutes(hours, minutes)<=tominutes(10,30)){
+        else if(tominutes(hours, minutes)>tominutes(18, 30)&&tominutes(hours, minutes)<=tominutes(18,35)){
           msg.reply("Current class : " + timetablearray[n-1][1].message);
         }
-        else if(tominutes(hours, minutes)>tominutes(10, 30)&&tominutes(hours, minutes)<=tominutes(11,30)){
+        else if(tominutes(hours, minutes)>tominutes(18, 35)&&tominutes(hours, minutes)<=tominutes(18,40)){
           msg.reply("Current class : " + timetablearray[n-1][2].message); 
         }
-        else if(tominutes(hours, minutes)>tominutes(11, 30)&&tominutes(hours, minutes)<=tominutes(12,30)){
+        else if(tominutes(hours, minutes)>tominutes(18, 40)&&tominutes(hours, minutes)<=tominutes(18,45)){
           msg.reply("Current class : " + timetablearray[n-1][3].message);
         }
-        else if(tominutes(hours, minutes)>tominutes(12, 30)&&tominutes(hours, minutes)<=tominutes(13,30)){
+        else if(tominutes(hours, minutes)>tominutes(18, 45)&&tominutes(hours, minutes)<=tominutes(18,50)){
           msg.reply("Current class : " + timetablearray[n-1][4].message);
         }
-        else if(tominutes(hours, minutes)>tominutes(14, 0)&&tominutes(hours, minutes)<=tominutes(15,0)){
+        else if(tominutes(hours, minutes)>tominutes(18, 50)&&tominutes(hours, minutes)<=tominutes(18,55)){
           msg.reply("Current class : " + timetablearray[n-1][5].message);
         }
         else{
