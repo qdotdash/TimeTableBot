@@ -52,10 +52,10 @@ client.on('ready', () => {
 
   cron.schedule("* * * * *", function() {
     const channel = client.channels.cache.get('756397267413368913');
-    var d = new Date().toLocaleString(undefined, {timeZone: 'Asia/Kolkata'});
-    var n = d.getDay()
-    var timestring = d.getHours()+":"+d.getMinutes();
-    channel.send(d)
+    var indiaTime = new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"});
+    var n = indiaTime.getDay()
+    var timestring = indiaTime.getHours()+":"+indiaTime.getMinutes();
+    channel.send(timestring)
     // if(timestring=="12:00"){
     //   channel.send(timetablearray[n-1][0].message);
     // }
