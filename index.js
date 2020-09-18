@@ -93,7 +93,7 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
     for(i=0;i<args.length;i++)
     {
         x=args[i].toLowerCase();
-    msg = msg.toLowerCase();
+    }
     if (x === 'go to cns') {
       msg.reply('https://meet.google.com/iyc-stko-ycn');
     }
@@ -115,7 +115,7 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
     else if(x === 'go to lab'){
         msg.reply('http://meet.google.com/zvg-pobm-piz');
     }
-  }
+  
   });
 
 
