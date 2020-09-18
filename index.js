@@ -55,24 +55,25 @@ client.on('ready', () => {
     var d = new Date();
     var n = d.getDay()
     var timestring = d.getHours()+":"+d.getMinutes();
-    if(timestring=="12:00"){
-      channel.send(timetablearray[n-1][0].message);
-    }
-    else if(timestring=="12:01"){
-      channel.send(timetablearray[n-1][1].message);
-    }
-    else if(timestring=="12:02"){  
-      channel.send(timetablearray[n-1][2].message);
-    }
-    else if(timestring=="12:03"){
-      channel.send(timetablearray[n-1][3].message);
-    }
-    else if(timestring=="12:04"){
-      channel.send(timetablearray[n-1][4].message);
-    }
-    else if(timestring=="12:05"){
-      channel.send(timetablearray[n-1][5].message);
-    }
+    channel.send("life happens");
+    // if(timestring=="12:00"){
+    //   channel.send(timetablearray[n-1][0].message);
+    // }
+    // else if(timestring=="12:01"){
+    //   channel.send(timetablearray[n-1][1].message);
+    // }
+    // else if(timestring=="12:02"){  
+    //   channel.send(timetablearray[n-1][2].message);
+    // }
+    // else if(timestring=="12:03"){
+    //   channel.send(timetablearray[n-1][3].message);
+    // }
+    // else if(timestring=="12:04"){
+    //   channel.send(timetablearray[n-1][4].message);
+    // }
+    // else if(timestring=="12:05"){
+    //   channel.send(timetablearray[n-1][5].message);
+    // }
 //     const user = <client>.users.cache.get('<id>');
 // user.send('<content>'); send dm 752835857081303052
   });
