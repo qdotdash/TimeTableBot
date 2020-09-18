@@ -61,7 +61,7 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
 
     var n = indiaTime.getDay()
     var timestring = indiaTime.getHours()+":"+indiaTime.getMinutes();
-    if(timestring=="16:30"){
+    if(timestring=="16:20"){
       channel.send("testing, Hour 1: " + timetablearray[n-1][0].message);
     }
     else if(timestring=="16:0"){
@@ -89,28 +89,33 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
 
   //lower case this case insensitive
   client.on('message', msg => {
+    let args=msg.content.split(" ");
+    for(i=0;i<args.length;i++)
+    {
+        x=args[i].toLowerCase();
     msg = msg.toLowerCase();
-    if (msg.content === 'go to cns') {
+    if (x === 'go to cns') {
       msg.reply('https://meet.google.com/iyc-stko-ycn');
     }
-    else if(msg.content === 'go to ml'){
+    else if(x === 'go to ml'){
         msg.reply('https://meet.google.com/dni-bzrr-war');
     }
-    else if(msg.content === 'go to cg'){
+    else if(x === 'go to cg'){
         msg.reply('https://meet.google.com/odp-ayya-trc');
     }
-    else if(msg.content === 'go to csa'){
+    else if(x === 'go to csa'){
         msg.reply('http://meet.google.com/aan-gzyr-xin');
     }
-    else if(msg.content === 'go to dc'){
+    else if(x === 'go to dc'){
         msg.reply('http://meet.google.com/shm-xotx-ydd');
     }
-    else if(msg.content === 'go to dip'){
+    else if(x === 'go to dip'){
         msg.reply('https://meet.google.com/rcm-cdom-hwh');
     }
-    else if(msg.content === 'go to lab'){
+    else if(x === 'go to lab'){
         msg.reply('http://meet.google.com/zvg-pobm-piz');
     }
+  }
   });
 
 
