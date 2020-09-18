@@ -23,7 +23,7 @@ const cron = require("node-cron");
     var dc = {message: "Distributed Computing(DC) by Bisna : http://meet.google.com/shm-xotx-ydd"};
     var dip = {message: "Digital Image Processing(DIP) by Jayasree : https://meet.google.com/rcm-cdom-hwh"};
     var lab = {message: "Compiler Design Lab(CDL) by Mumthas and Kala : http://meet.google.com/zvg-pobm-piz"};
-    var pp = {message: "Programming Paradigms(PP) : What the hell is this"};
+    var pp = {message: "Programming Paradigms(PP) : No meet links as of my knowledge"};
     var project = {message : "Project hour under Valsaraj"};
     var seminar = {message : "Seminar hour under Ajay James"};
     var honors = {message : "Honors : Digital Image Processing(DIP) by Jayasree : https://meet.google.com/rcm-cdom-hwh"};
@@ -61,26 +61,25 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
 
     var n = indiaTime.getDay()
     var timestring = indiaTime.getHours()+":"+indiaTime.getMinutes();
-    if(timestring=="16:20"){
-      channel.send("testing, Hour 1: " + timetablearray[n-1][0].message);
-    }
-    else if(timestring=="16:0"){
-      channel.send("Hey, This is TimeTableRobot, I will notify you in time with the google meet links when it is time for your class, Have a wonderful day");
-    }
-    else if(timestring=="16:33"){
-      channel.send("testing, Hour 2: " + timetablearray[n-1][1].message);
-    }
-    else if(timestring=="17:0"){  
-      channel.send("testing, Hour 3: " + timetablearray[n-1][2].message); 
-    }
-    else if(timestring=="18:0"){
-      channel.send("testing, Hour 4: " + timetablearray[n-1][3].message);
-    }
-    else if(timestring=="19:0"){
-      channel.send("testing, Hour 5: " + timetablearray[n-1][4].message);
-    }
-    else if(timestring=="19:30"){
-      channel.send("testing, Hour 6: " + timetablearray[n-1][5].message);
+    if(n!=6&&n!=7){
+      if(timestring=="8:30"){
+        channel.send("Hour 1: " + timetablearray[n-1][0].message);
+      }
+      else if(timestring=="9:30"){
+        channel.send("Hour 2: " + timetablearray[n-1][1].message);
+      }
+      else if(timestring=="10:30"){  
+        channel.send("Hour 3: " + timetablearray[n-1][2].message); 
+      }
+      else if(timestring=="11:30"){
+        channel.send("Hour 4: " + timetablearray[n-1][3].message);
+      }
+      else if(timestring=="12:30"){
+        channel.send("Hour 5: " + timetablearray[n-1][4].message);
+      }
+      else if(timestring=="14:0"){
+        channel.send("Hour 6: " + timetablearray[n-1][5].message);
+      }
     }
 //     const user = <client>.users.cache.get('<id>');
 // user.send('<content>'); send dm 752835857081303052
@@ -144,6 +143,9 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
         else{
           msg.reply("Class hours are over, I need to take a nap")
         }
+      }
+      else{
+        msg.reply("Go back to sleep, its offday")
       }
   }
     
