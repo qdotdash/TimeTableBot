@@ -138,7 +138,7 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
         else if(tominutes(hours, minutes)>tominutes(12, 30)&&tominutes(hours, minutes)<=tominutes(13,30)){
           msg.reply("Current class : " + timetablearray[n-1][4].message);
         }
-        else if(tominutes(hours, minutes)>tominutes(14, 0)&&tominutes(hours, minutes)<=tominutes(19,0)){//change this
+        else if(tominutes(hours, minutes)>tominutes(14, 0)&&tominutes(hours, minutes)<=tominutes(15,0)){
           msg.reply("Current class : " + timetablearray[n-1][5].message);
         }
         else{
