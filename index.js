@@ -35,7 +35,7 @@ const cron = require("node-cron");
     var friday = {p1:cg, p2:dc, p3:csa, p4:pp, p5:dc, p6:honors};
 
     var timetablearray = new Array(5);
-    for(var i=0; i<5; i++){
+    for(var i=0; i<5; i++){ 
       timetablearray[i] = new Array(6)
     }
 
@@ -105,25 +105,25 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
   client.on('message', msg => {
     var messagestring = msg.content.toLowerCase();
     if (messagestring === 'go to cns') {
-      msg.reply('https://meet.google.com/iyc-stko-ycn');
+      msg.reply(cns.message);
     }
     else if(messagestring === 'go to ml'){
-        msg.reply('https://meet.google.com/dni-bzrr-war');
+        msg.reply(ml.message);
     }
     else if(messagestring === 'go to cg'){
-        msg.reply('https://meet.google.com/odp-ayya-trc');
+        msg.reply(cg.message);
     }
     else if(messagestring === 'go to csa'){
-        msg.reply('http://meet.google.com/aan-gzyr-xin');
+        msg.reply(csa.message);
     }
     else if(messagestring === 'go to dc'){
-        msg.reply('http://meet.google.com/shm-xotx-ydd');
+        msg.reply(dc.message);
     }
     else if(messagestring === 'go to dip'){
-        msg.reply('https://meet.google.com/rcm-cdom-hwh');
+        msg.reply(dip.message);
     }
     else if(messagestring === 'go to lab'){
-        msg.reply('http://meet.google.com/zvg-pobm-piz');
+        msg.reply(lab.message);
     }
     else if(messagestring === 'current class'){
       var currentTime = new Date();
