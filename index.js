@@ -5,6 +5,7 @@ const client = new Discord.Client();
 const cron = require("node-cron");
     const express = require("express");
     const fs = require("fs");
+const { time } = require('console');
 
     app = express();
     //honors in seperate channel
@@ -55,7 +56,7 @@ client.on('ready', () => {
     var d = new Date();
     var n = d.getDay()
     var timestring = d.getHours()+":"+d.getMinutes();
-    channel.send("life happens");
+    channel.send(timestring);
     // if(timestring=="12:00"){
     //   channel.send(timetablearray[n-1][0].message);
     // }
