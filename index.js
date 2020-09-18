@@ -89,28 +89,29 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
 
   //lower case this case insensitive
   client.on('message', msg => {
-    if (msg.content === 'go to cns') {
+    var messagestring = msg.content.toLowerCase();
+    if (messagestring === 'go to cns') {
       msg.reply('https://meet.google.com/iyc-stko-ycn');
     }
-    else if(msg.content === 'go to ml'){
+    else if(messagestring === 'go to ml'){
         msg.reply('https://meet.google.com/dni-bzrr-war');
     }
-    else if(msg.content === 'go to cg'){
+    else if(messagestring === 'go to cg'){
         msg.reply('https://meet.google.com/odp-ayya-trc');
     }
-    else if(msg.content === 'go to csa'){
+    else if(messagestring === 'go to csa'){
         msg.reply('http://meet.google.com/aan-gzyr-xin');
     }
-    else if(msg.content === 'go to dc'){
+    else if(messagestring === 'go to dc'){
         msg.reply('http://meet.google.com/shm-xotx-ydd');
     }
-    else if(msg.content === 'go to dip'){
+    else if(messagestring === 'go to dip'){
         msg.reply('https://meet.google.com/rcm-cdom-hwh');
     }
-    else if(msg.content === 'go to lab'){
+    else if(messagestring === 'go to lab'){
         msg.reply('http://meet.google.com/zvg-pobm-piz');
     }
-    else if(msg.content === 'current class'){
+    else if(messagestring === 'current class'){
       var currentTime = new Date();
       var ISTOffset = 330;   // IST offset UTC +5:30 
       var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
