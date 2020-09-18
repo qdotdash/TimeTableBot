@@ -71,9 +71,10 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
 
     var n = indiaTime.getDay()
     var timestring = indiaTime.getHours()+":"+indiaTime.getMinutes();
+    //use a single current class var to assign the current class and show it when the current class is called
     
     if(n!=6&&n!=7){
-      if(timestring=="18:57"){
+      if(timestring=="8:30"){
         channel.send(weekday[indiaTime.getDay()-1] + ", Hour 1: " + timetablearray[n-1][0].message);
       }
       else if(timestring=="9:30"){
