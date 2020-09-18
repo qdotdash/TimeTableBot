@@ -55,7 +55,7 @@ client.on('ready', () => {
     var d = new Date().toLocaleString(undefined, {timeZone: 'Asia/Kolkata'});
     var n = d.getDay()
     var timestring = d.getHours()+":"+d.getMinutes();
-    channel.send(timestring)
+    channel.send(d)
     // if(timestring=="12:00"){
     //   channel.send(timetablearray[n-1][0].message);
     // }
