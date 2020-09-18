@@ -86,6 +86,10 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
 // user.send('<content>'); send dm 752835857081303052
   });
 
+  function tominutes(h, m){
+     return h*60 + m;
+  }
+
 
   //lower case this case insensitive
   client.on('message', msg => {
@@ -116,27 +120,30 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
       var ISTOffset = 330;   // IST offset UTC +5:30 
       var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
       var n = indiaTime.getDay()
-      var timestring = indiaTime.getHours()+":"+indiaTime.getMinutes();
-      if(timestring=="16:20"){
-        channel.send("testing, Hour 1: " + timetablearray[n-1][0].message);
-      }
-      else if(timestring=="16:0"){
-        channel.send("Hey, This is TimeTableRobot, I will notify you in time with the google meet links when it is time for your class, Have a wonderful day");
-      }
-      else if(timestring=="16:33"){
-        channel.send("testing, Hour 2: " + timetablearray[n-1][1].message);
-      }
-      else if(timestring=="17:0"){  
-        channel.send("testing, Hour 3: " + timetablearray[n-1][2].message); 
-      }
-      else if(timestring=="18:0"){
-        channel.send("testing, Hour 4: " + timetablearray[n-1][3].message);
-      }
-      else if(timestring=="19:0"){
-        channel.send("testing, Hour 5: " + timetablearray[n-1][4].message);
-      }
-      else if(timestring=="19:30"){
-        channel.send("testing, Hour 6: " + timetablearray[n-1][5].message);
+      var hours = indiaTime.getHours();
+      var minutes = indiaTime.getMinutes();
+      if(n!=6&&n!=7){
+        if(tominutes(hours, minutes)>tominutes(8, 30)&&tominutes(hours, minutes)<=tominutes(9,30)){
+          channel.send("Current class : " + timetablearray[n-1][0].message);
+        }
+        else if(tominutes(hours, minutes)>tominutes(9, 30)&&tominutes(hours, minutes)<=tominutes(10,30)){
+          channel.send("Current class : " + timetablearray[n-1][1].message);
+        }
+        else if(tominutes(hours, minutes)>tominutes(10, 30)&&tominutes(hours, minutes)<=tominutes(11,30)){
+          channel.send("Current class : " + timetablearray[n-1][2].message); 
+        }
+        else if(tominutes(hours, minutes)>tominutes(11, 30)&&tominutes(hours, minutes)<=tominutes(12,30)){
+          channel.send("Current class : " + timetablearray[n-1][3].message);
+        }
+        else if(tominutes(hours, minutes)>tominutes(12, 30)&&tominutes(hours, minutes)<=tominutes(13,30)){
+          channel.send("Current class : " + timetablearray[n-1][4].message);
+        }
+        else if(tominutes(hours, minutes)>tominutes(14, 0)&&tominutes(hours, minutes)<=tominutes(19,0)){//change this
+          channel.send("Current class : " + timetablearray[n-1][5].message);
+        }
+        else{
+          channel.send("Class hours are over, I need to take a nap")
+        }
       }
   }
     
