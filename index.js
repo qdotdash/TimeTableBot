@@ -52,7 +52,7 @@ client.on('ready', () => {
 
   cron.schedule("* * * * *", function() {
     const channel = client.channels.cache.get('756397267413368913');
-    var indiaTime = new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"});
+    var indiaTime = new Date();
     var n = indiaTime.getDay()
     var timestring = indiaTime.getHours()+":"+indiaTime.getMinutes();
     channel.send(timestring)
