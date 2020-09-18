@@ -61,10 +61,10 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
 
     var n = indiaTime.getDay()
     var timestring = indiaTime.getHours()+":"+indiaTime.getMinutes();
-    if(timestring=="16:0"){
+    if(timestring=="16:30"){
       channel.send("testing, Hour 1: " + timetablearray[n-1][0].message);
     }
-    else if(timestring=="15:55"){
+    else if(timestring=="16:0"){
       channel.send("Hey, This is TimeTableRobot, I will notify you in time with the google meet links when it is time for your class, Have a wonderful day");
     }
     else if(timestring=="17:0"){
