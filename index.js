@@ -73,7 +73,7 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
     var timestring = indiaTime.getHours()+":"+indiaTime.getMinutes();
     
     if(n!=6&&n!=7){
-      if(timestring=="8:30"){
+      if(timestring=="18:57"){
         channel.send(weekday[indiaTime.getDay()-1] + ", Hour 1: " + timetablearray[n-1][0].message);
       }
       else if(timestring=="9:30"){
