@@ -61,25 +61,24 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
 
     var n = indiaTime.getDay()
     var timestring = indiaTime.getHours()+":"+indiaTime.getMinutes();
-    channel.send(timestring)
-    // if(timestring=="12:00"){
-    //   channel.send(timetablearray[n-1][0].message);
-    // }
-    // else if(timestring=="12:01"){
-    //   channel.send(timetablearray[n-1][1].message);
-    // }
-    // else if(timestring=="12:02"){  
-    //   channel.send(timetablearray[n-1][2].message);
-    // }
-    // else if(timestring=="12:03"){
-    //   channel.send(timetablearray[n-1][3].message);
-    // }
-    // else if(timestring=="12:04"){
-    //   channel.send(timetablearray[n-1][4].message);
-    // }
-    // else if(timestring=="12:05"){
-    //   channel.send(timetablearray[n-1][5].message);
-    // }
+    if(timestring=="15:12"){
+      channel.send(timetablearray[n-1][0].message);
+    }
+    else if(timestring=="15:15"){
+      channel.send(timetablearray[n-1][1].message);
+    }
+    else if(timestring=="15:17"){  
+      channel.send(timetablearray[n-1][2].message);
+    }
+    else if(timestring=="15:19"){
+      channel.send(timetablearray[n-1][3].message);
+    }
+    else if(timestring=="15:20"){
+      channel.send(timetablearray[n-1][4].message);
+    }
+    else if(timestring=="15:23"){
+      channel.send(timetablearray[n-1][5].message);
+    }
 //     const user = <client>.users.cache.get('<id>');
 // user.send('<content>'); send dm 752835857081303052
   });
