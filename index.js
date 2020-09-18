@@ -89,33 +89,28 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
 
   //lower case this case insensitive
   client.on('message', msg => {
-    let args=msg.content.split(" ");
-    for(i=0;i<args.length;i++)
-    {
-        x=args[i].toLowerCase();
-    }
-    if (x === 'go to cns') {
+    if (msg === 'go to cns') {
       msg.reply('https://meet.google.com/iyc-stko-ycn');
     }
-    else if(x === 'go to ml'){
+    else if(msg === 'go to ml'){
         msg.reply('https://meet.google.com/dni-bzrr-war');
     }
-    else if(x === 'go to cg'){
+    else if(msg === 'go to cg'){
         msg.reply('https://meet.google.com/odp-ayya-trc');
     }
-    else if(x === 'go to csa'){
+    else if(msg === 'go to csa'){
         msg.reply('http://meet.google.com/aan-gzyr-xin');
     }
-    else if(x === 'go to dc'){
+    else if(msg === 'go to dc'){
         msg.reply('http://meet.google.com/shm-xotx-ydd');
     }
-    else if(x === 'go to dip'){
+    else if(msg === 'go to dip'){
         msg.reply('https://meet.google.com/rcm-cdom-hwh');
     }
-    else if(x === 'go to lab'){
+    else if(msg === 'go to lab'){
         msg.reply('http://meet.google.com/zvg-pobm-piz');
     }
-  
+
   });
 
 
