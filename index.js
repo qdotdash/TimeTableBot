@@ -158,7 +158,7 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
         }
       }
       else{
-        msg.reply("Go back to sleep, its " + weekday[indiaTime.getDay()-1]);
+        msg.reply("Go back to sleep, its " + weekday[indiaTime.getDay()]);
       }
   }
     
