@@ -47,13 +47,14 @@ const cron = require("node-cron");
 
     var weekday = new Array(7);
  
-  weekday[0] = "Monday";
-  weekday[1] = "Tuesday";
-  weekday[2] = "Wednesday";
-  weekday[3] = "Thursday";
-  weekday[4] = "Friday";
-  weekday[5] = "Saturday";
-  weekday[6] = "Sunday";
+  weekday[0] = "Sunday";
+  weekday[1] = "Monday";
+  weekday[2] = "Tuesday";
+  weekday[3] = "Wednesday";
+  weekday[4] = "Thursday";
+  weekday[5] = "Friday";
+  weekday[6] = "Saturday";
+  
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
@@ -73,9 +74,9 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
     var timestring = indiaTime.getHours()+":"+indiaTime.getMinutes();
     //use a single current class var to assign the current class and show it when the current class is called
     
-    if(n!=6&&n!=7){
+    if(n!=6&&n!=0){
       if(timestring=="8:30"){
-        channel.send(weekday[indiaTime.getDay()-1] + ", Hour 1: " + timetablearray[n-1][0].message);
+        channel.send(weekday[indiaTime.getDay()] + ", Hour 1: " + timetablearray[n-1][0].message);
       }
       else if(timestring=="9:30"){
         channel.send("Hour 2: " + timetablearray[n-1][1].message);
@@ -133,7 +134,7 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
       var n = indiaTime.getDay()
       var hours = indiaTime.getHours();
       var minutes = indiaTime.getMinutes();
-      if(n!=6&&n!=7){
+      if(n!=6&&n!=0){
         if(tominutes(hours, minutes)>tominutes(8, 30)&&tominutes(hours, minutes)<=tominutes(9,30)){
           msg.reply("Current class : " + timetablearray[n-1][0].message);
         }
