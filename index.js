@@ -62,7 +62,7 @@ client.on('ready', () => {
 
 
   cron.schedule("* * * * *", function() {
-    const channel = client.channels.cache.get('756397267413368913');
+    const channel = client.channels.cache.get('756451422069063711');
 
     var currentTime = new Date();
 
@@ -78,19 +78,19 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
       if(timestring=="8:30"){
         channel.send(weekday[indiaTime.getDay()] + ", Hour 1: " + timetablearray[n-1][0].message);
       }
-      else if(timestring=="18:30"){
+      else if(timestring=="9:30"){
         channel.send("Hour 2: " + timetablearray[n-1][1].message);
       }
-      else if(timestring=="18:35"){  
+      else if(timestring=="10:30"){  
         channel.send("Hour 3: " + timetablearray[n-1][2].message); 
       }
-      else if(timestring=="18:40"){
+      else if(timestring=="11:30"){
         channel.send("Hour 4: " + timetablearray[n-1][3].message);
       }
-      else if(timestring=="18:45"){
+      else if(timestring=="12:30"){
         channel.send("Hour 5: " + timetablearray[n-1][4].message);
       }
-      else if(timestring=="18:50"){
+      else if(timestring=="14:0"){
         channel.send("Hour 6: " + timetablearray[n-1][5].message);
       }
     }
@@ -138,19 +138,19 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
         if(tominutes(hours, minutes)>tominutes(8, 30)&&tominutes(hours, minutes)<=tominutes(9,30)){
           msg.reply("Current class : " + timetablearray[n-1][0].message);
         }
-        else if(tominutes(hours, minutes)>tominutes(18, 30)&&tominutes(hours, minutes)<=tominutes(18,35)){
+        else if(tominutes(hours, minutes)>tominutes(9, 30)&&tominutes(hours, minutes)<=tominutes(10,30)){
           msg.reply("Current class : " + timetablearray[n-1][1].message);
         }
-        else if(tominutes(hours, minutes)>tominutes(18, 35)&&tominutes(hours, minutes)<=tominutes(18,40)){
+        else if(tominutes(hours, minutes)>tominutes(10, 30)&&tominutes(hours, minutes)<=tominutes(11,30)){
           msg.reply("Current class : " + timetablearray[n-1][2].message); 
         }
-        else if(tominutes(hours, minutes)>tominutes(18, 40)&&tominutes(hours, minutes)<=tominutes(18,45)){
+        else if(tominutes(hours, minutes)>tominutes(11, 30)&&tominutes(hours, minutes)<=tominutes(12,30)){
           msg.reply("Current class : " + timetablearray[n-1][3].message);
         }
-        else if(tominutes(hours, minutes)>tominutes(18, 45)&&tominutes(hours, minutes)<=tominutes(18,50)){
+        else if(tominutes(hours, minutes)>tominutes(12, 30)&&tominutes(hours, minutes)<=tominutes(13,30)){
           msg.reply("Current class : " + timetablearray[n-1][4].message);
         }
-        else if(tominutes(hours, minutes)>tominutes(18, 50)&&tominutes(hours, minutes)<=tominutes(18,55)){
+        else if(tominutes(hours, minutes)>tominutes(14, 0)&&tominutes(hours, minutes)<=tominutes(15,0)){
           msg.reply("Current class : " + timetablearray[n-1][5].message);
         }
         else{
