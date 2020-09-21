@@ -177,7 +177,7 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
       var i;
       var timetabletoday = "";
       for(i=0; i<6; i++){
-        timetabletoday = timetabletoday + i+1 + ". " + timetablearray[n-1][i].subject + "\n";   
+        timetabletoday = timetabletoday + (i+1) + ". " + timetablearray[n-1][i].subject + "\n";   
       }
       msg.reply(timetabletoday);
     }
