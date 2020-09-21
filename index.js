@@ -16,17 +16,17 @@ const cron = require("node-cron");
     //adding birthdays
 
 
-    var cns = {message: "Cryptography and Network Security(CNS) by George Mathew : https://meet.google.com/iyc-stko-ycn"};
-    var ml = {message: "Machine Learning(ML) by Ezu : https://meet.google.com/dni-bzrr-war"};
-    var cg = {message: "Computer Graphics(CG) by Jayasree : https://meet.google.com/odp-ayya-trc"};
-    var csa = {message: "Computer System Architecture(CSA) by Mumthas : http://meet.google.com/aan-gzyr-xin"};
-    var dc = {message: "Distributed Computing(DC) by Bisna : http://meet.google.com/shm-xotx-ydd"};
-    var dip = {message: "Digital Image Processing(DIP) by Jayasree : https://meet.google.com/rcm-cdom-hwh"};
-    var lab = {message: "Compiler Design Lab(CDL) by Mumthas and Kala : http://meet.google.com/zvg-pobm-piz"};
-    var pp = {message: "Programming Paradigms(PP) : No meet links as of my knowledge"};
-    var project = {message : "Project hour under Valsaraj"};
-    var seminar = {message : "Seminar hour under Ajay James"};
-    var honors = {message : "Honors : Digital Image Processing(DIP) by Jayasree : https://meet.google.com/rcm-cdom-hwh"};
+    var cns = {message: "Cryptography and Network Security(CNS) by George Mathew : https://meet.google.com/iyc-stko-ycn", subject: "CNS - George Mathew"};
+    var ml = {message: "Machine Learning(ML) by Ezu : https://meet.google.com/dni-bzrr-war", subject: "ML - Ezu"};
+    var cg = {message: "Computer Graphics(CG) by Jayasree : https://meet.google.com/odp-ayya-trc", subject: "CG - Jayasree"};
+    var csa = {message: "Computer System Architecture(CSA) by Mumthas : http://meet.google.com/aan-gzyr-xin", subject: "CSA - Mumthas"};
+    var dc = {message: "Distributed Computing(DC) by Bisna : http://meet.google.com/shm-xotx-ydd", subject: "DC - Bisna"};
+    var dip = {message: "Digital Image Processing(DIP) by Jayasree : https://meet.google.com/rcm-cdom-hwh", subject: "DIP - Jayasree"};
+    var lab = {message: "Compiler Design Lab(CDL) by Mumthas and Kala : http://meet.google.com/zvg-pobm-piz", subject: "CD Lab - Mumthas and Kala"};
+    var pp = {message: "Programming Paradigms(PP) : No meet links as of my knowledge", subject: "PP - Valsaraj"};
+    var project = {message : "Project hour under Valsaraj", subject: "Project - Valsaraj"};
+    var seminar = {message : "Seminar hour under Ajay James", subject: "Seminar - Ajay James"};
+    var honors = {message : "Honors : Digital Image Processing(DIP) by Jayasree : https://meet.google.com/rcm-cdom-hwh", subject: "Honors(DIP) - Jayasree"};
 
     var monday = {p1:pp, p2:ml, p3:project, p4:seminar, p5:seminar, p6:honors};
     var tuesday = {p1:cns, p2:cg, p3:ml, p4:pp, p5:lab, p6:lab};
@@ -63,6 +63,7 @@ client.on('ready', () => {
 
   cron.schedule("* * * * *", function() {
     const channel = client.channels.cache.get('756451422069063711');
+    const channelgallery = client.channels.cache.get('752834723973300247');
 
     var currentTime = new Date();
 
@@ -77,21 +78,27 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
     if(n!=6&&n!=0){
       if(timestring=="8:30"){
         channel.send(weekday[indiaTime.getDay()] + ", Hour 1: " + timetablearray[n-1][0].message);
+        channelgallery.send(weekday[indiaTime.getDay()] + ", Hour 1: " + timetablearray[n-1][0].message); 
       }
       else if(timestring=="9:30"){
         channel.send("Hour 2: " + timetablearray[n-1][1].message);
+        channelgallery.send("Hour 2: " + timetablearray[n-1][1].message);
       }
       else if(timestring=="10:30"){  
         channel.send("Hour 3: " + timetablearray[n-1][2].message); 
+        channelgallery.send("Hour 3: " + timetablearray[n-1][2].message); 
       }
       else if(timestring=="11:30"){
         channel.send("Hour 4: " + timetablearray[n-1][3].message);
+        channelgallery.send("Hour 4: " + timetablearray[n-1][3].message);
       }
       else if(timestring=="12:30"){
         channel.send("Hour 5: " + timetablearray[n-1][4].message);
+        channelgallery.send("Hour 5: " + timetablearray[n-1][4].message);
       }
       else if(timestring=="14:0"){
         channel.send("Hour 6: " + timetablearray[n-1][5].message);
+        channelgallery.send("Hour 6: " + timetablearray[n-1][5].message);
       }
     }
 //     const user = <client>.users.cache.get('<id>');
@@ -154,13 +161,30 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
           msg.reply("Current class : " + timetablearray[n-1][5].message);
         }
         else{
-          msg.reply("Class hours are over, I need to take a nap")
+          msg.reply("No class hours now bruh...")
         }
       }
       else{
         msg.reply("Go back to sleep, its " + weekday[indiaTime.getDay()]);
       }
   }
+  else if(messagestring === 'timetable today'){
+    var currentTime = new Date();
+    var ISTOffset = 330;   // IST offset UTC +5:30 
+    var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
+    var n = indiaTime.getDay()
+    if(n!=6&&n!=0){
+      var i;
+      var timetabletoday = "";
+      for(i=0; i<6; i++){
+        timetabletoday = timetabletoday + i+1 + ". " + timetablearray[n-1][i].subject + "\n";   
+      }
+      msg.reply(timetabletoday);
+    }
+    else{
+      msg.reply("Go back to sleep, its " + weekday[indiaTime.getDay()]);
+    }
+}
     
 
   });
