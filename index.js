@@ -175,7 +175,7 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
     var n = indiaTime.getDay()
     if(n!=6&&n!=0){
       var i;
-      var timetabletoday = "";
+      var timetabletoday = "\n";
       for(i=0; i<6; i++){
         timetabletoday = timetabletoday + (i+1) + ". " + timetablearray[n-1][i].subject + "\n";   
       }
