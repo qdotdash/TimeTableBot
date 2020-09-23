@@ -136,6 +136,11 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
      return h*60 + m;
   }
 
+  function help(){
+    var commandstring = "\n*go to lab* or *go to csa* - Displays the subject meetlink\n\n*current class* - display current class\n\n*timetable today* - display today's timetable\n\n*timetable help* - displays the commands available";
+    return commandstring;
+  }
+
 
   //lower case this case insensitive
   client.on('message', msg => {
@@ -211,9 +216,10 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
     else{
       msg.reply("Go back to sleep, its " + weekday[indiaTime.getDay()]);
     }
-}
-    
-
+  }
+  else if(messagestring === 'timetable help'){
+      msg.reply(help());
+    }
   });
 
 
