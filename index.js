@@ -99,7 +99,7 @@ client.on('ready', () => {
   }
 
   function help(){
-    var commandstring = "\n**go to lab** or **go to csa** - display the subject meetlink\n\n**current class** - display current class\n\n**timetable today** - display today's timetable\n\n**timetable help** - display the commands available";
+    var commandstring = "\n*go to lab* or *go to csa* - Displays the subject meetlink\n\n*current class* - display current class\n\n*timetable today* - display today's timetable\n\n*timetable help* - displays the commands available";
     return commandstring;
   }
 
