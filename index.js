@@ -76,29 +76,47 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
     //use a single current class var to assign the current class and show it when the current class is called
     
     if(n!=6&&n!=0){
-      if(timestring=="8:30"){
-        channel.send(weekday[indiaTime.getDay()] + ", Hour 1: " + timetablearray[n-1][0].message);
-        channelgallery.send(weekday[indiaTime.getDay()] + ", Hour 1: " + timetablearray[n-1][0].message); 
+      if(indiaTime.getDay()==5)
+      {
+	       if(timestring=="8:00"){
+		channel.send(weekday[indiaTime.getDay()] + ", Hour 1: " + timetablearray[n-1][0].message);
+	      }
+	      else if(timestring=="8:55"){
+		channel.send("Hour 2: " + timetablearray[n-1][1].message);
+	      }
+	      else if(timestring=="09:50"){  
+		channel.send("Hour 3: " + timetablearray[n-1][2].message); 
+	      }
+	      else if(timestring=="10:45"){
+		channel.send("Hour 4: " + timetablearray[n-1][3].message);
+	      }
+	      else if(timestring=="11:40"){
+		channel.send("Hour 5: " + timetablearray[n-1][4].message);
+	      }
+	      else if(timestring=="14:0"){
+		channel.send("Hour 6: " + timetablearray[n-1][5].message);
+	      }
       }
-      else if(timestring=="9:30"){
-        channel.send("Hour 2: " + timetablearray[n-1][1].message);
-        channelgallery.send("Hour 2: " + timetablearray[n-1][1].message);
-      }
-      else if(timestring=="10:30"){  
-        channel.send("Hour 3: " + timetablearray[n-1][2].message); 
-        channelgallery.send("Hour 3: " + timetablearray[n-1][2].message); 
-      }
-      else if(timestring=="11:30"){
-        channel.send("Hour 4: " + timetablearray[n-1][3].message);
-        channelgallery.send("Hour 4: " + timetablearray[n-1][3].message);
-      }
-      else if(timestring=="12:30"){
-        channel.send("Hour 5: " + timetablearray[n-1][4].message);
-        channelgallery.send("Hour 5: " + timetablearray[n-1][4].message);
-      }
-      else if(timestring=="14:0"){
-        channel.send("Hour 6: " + timetablearray[n-1][5].message);
-        channelgallery.send("Hour 6: " + timetablearray[n-1][5].message);
+      else
+      {
+	      if(timestring=="8:30"){
+		channel.send(weekday[indiaTime.getDay()] + ", Hour 1: " + timetablearray[n-1][0].message);
+	      }
+	      else if(timestring=="9:30"){
+		channel.send("Hour 2: " + timetablearray[n-1][1].message);
+	      }
+	      else if(timestring=="10:30"){  
+		channel.send("Hour 3: " + timetablearray[n-1][2].message); 
+	      }
+	      else if(timestring=="11:30"){
+		channel.send("Hour 4: " + timetablearray[n-1][3].message);
+	      }
+	      else if(timestring=="12:30"){
+		channel.send("Hour 5: " + timetablearray[n-1][4].message);
+	      }
+	      else if(timestring=="14:0"){
+		channel.send("Hour 6: " + timetablearray[n-1][5].message);
+	      }
       }
     }
 //     const user = <client>.users.cache.get('<id>');
