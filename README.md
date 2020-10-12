@@ -1,5 +1,7 @@
 # TimeTableBot
 
+<img src="https://github.com/qdotdash/TimeTableBot/blob/dev/screenshots/socialpreview.png" width=800>
+
 A discord bot made using JavaScript to send timely notifications when a class hour starts. TimeTableBot sends class name and its corresponding google meet link 
 to the desired discord channel. It will also send welcome banners to new users. The bot is hosted in Heroku.
 
