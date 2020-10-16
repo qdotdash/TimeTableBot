@@ -105,7 +105,7 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
     if(n!=6&&n!=0){
       if(indiaTime.getDay()==5)
       {
-	       if(timestring=="8:00"){
+	       if(timestring=="8:0"){
     channel.send(weekday[indiaTime.getDay()] + ", Hour 1: " + timetablearray[n-1][0].message);
     channelgallery.send(weekday[indiaTime.getDay()] + ", Hour 1: " + timetablearray[n-1][0].message);
 	      }
@@ -113,7 +113,7 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
     channel.send("Hour 2: " + timetablearray[n-1][1].message);
     channelgallery.send("Hour 2: " + timetablearray[n-1][1].message);
 	      }
-	      else if(timestring=="09:50"){  
+	      else if(timestring=="9:50"){  
     channel.send("Hour 3: " + timetablearray[n-1][2].message); 
     channelgallery.send("Hour 3: " + timetablearray[n-1][2].message);
 	      }
