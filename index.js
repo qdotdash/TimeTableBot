@@ -193,8 +193,11 @@ var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
     else if(messagestring === 'go to dip'){
         msg.reply(dip.message);
     }
-    else if(messagestring === 'go to lab'){
-        msg.reply(lab.message);
+    else if(messagestring === 'go to dip'){
+      msg.reply(dip.message);
+    }
+    else if(messagestring === 'go to pp'){
+        msg.reply(pp.message);
     }
     else if(messagestring === 'current class'){
       var currentTime = new Date();
