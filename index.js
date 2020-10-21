@@ -98,7 +98,7 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
 //////////////////////////////////////////////////////////////////////////////////////FUNCTION RETURNING THE HELP COMMAND STRING
 
  function help(){
-   var commandstring = "\n**go to lab** or **go to csa** - display the subject meetlink\n\n**current class** - display current class\n\n**timetable today** - display today's timetable\n\n**timetable help** - display the commands available";
+   var commandstring = "\n**go to lab** or **go to csa** - display the subject meetlink\n\n**current class** - display current class\n\n**timetable today** - display today's timetable\n\n**timetable help** - display the commands available\n\n**!attendance** - sends a tts attendance alert message\n\n**get me cns** - get the auth=2 URL for the meet link(for me:P)";
    return commandstring;
  }
 
