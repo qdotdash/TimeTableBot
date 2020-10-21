@@ -205,27 +205,48 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
     if (messagestring === 'go to cns') {
       msg.reply(cns.message);
     }
+    else if(messagestring === 'get me cns'){
+      msg.reply(cns.link);
+    }
     else if(messagestring === 'go to ml'){
         msg.reply(ml.message);
+    }
+    else if(messagestring === 'get me ml'){
+      msg.reply(ml.link);
     }
     else if(messagestring === 'go to cg'){
         msg.reply(cg.message);
     }
+    else if(messagestring === 'get me cg'){
+      msg.reply(cg.link);
+    }
     else if(messagestring === 'go to csa'){
         msg.reply(csa.message);
+    }
+    else if(messagestring === 'get me csa'){
+      msg.reply(csa.link);
     }
     else if(messagestring === 'go to dc'){
         msg.reply(dc.message);
     } 
+    else if(messagestring === 'get me dc'){
+      msg.reply(dc.link);
+    }
     else if(messagestring === 'go to dip'){
         msg.reply(dip.message);
     }
     else if(messagestring === 'go to lab'){
         msg.reply(lab.message);
     }
+    else if(messagestring === 'get me lab'){
+      msg.reply(lab.link);
+    }
     else if(messagestring === 'go to pp'){
       msg.reply(pp.message);
-  }
+    }
+    else if(messagestring === 'get me pp'){
+    msg.reply(pp.link);
+    }
     else if(messagestring === 'current class'){
       var currentTime = new Date();
       var ISTOffset = 330;   // IST offset UTC +5:30 
