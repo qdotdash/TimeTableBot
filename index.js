@@ -247,6 +247,9 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
     else if(messagestring === 'get me pp'){
     msg.reply(pp.link);
     }
+    else if(messagestring === '!attendance'){
+      msg.reply("attendance alert, attendance alert, attendance alert", {tts: true});
+    }
     else if(messagestring === 'current class'){
       var currentTime = new Date();
       var ISTOffset = 330;   // IST offset UTC +5:30 
