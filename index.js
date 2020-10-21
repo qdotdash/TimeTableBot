@@ -73,7 +73,7 @@ var csa = {message: "Computer System Architecture(CSA) by Mumthas : http://meet.
 var dc = {message: "Distributed Computing(DC) by Bisna : http://meet.google.com/shm-xotx-ydd", subject: "DC - Bisna"};
 var dip = {message: "Digital Image Processing(DIP) by Jayasree : https://meet.google.com/rcm-cdom-hwh", subject: "DIP - Jayasree"};
 var lab = {message: "Compiler Design Lab(CDL) by Mumthas and Kala : http://meet.google.com/zvg-pobm-piz", subject: "CD Lab - Mumthas and Kala"};
-var pp = {message: "Programming Paradigms(PP) : No meet links as of my knowledge", subject: "PP - Valsaraj"};
+var pp = {message: "Programming Paradigms in hell(PP) by Salsaraj: https://meet.google.com/jmd-dohm-zmn", subject: "PP - Salsaraj"};
 var project = {message : "Project hour under Valsaraj", subject: "Project - Valsaraj"};
 var seminar = {message : "Seminar hour under Ajay James", subject: "Seminar - Ajay James"};
 var honors = {message : "Honors : Digital Image Processing(DIP) by Jayasree : https://meet.google.com/rcm-cdom-hwh", subject: "Honors(DIP) - Jayasree"};
@@ -126,13 +126,13 @@ const channelgallery = client.channels.cache.get('752834723973300247');
     if(n!=6&&n!=0){
       if(indiaTime.getDay()==5)
       {
-        if(timestring=="8:00"){
+        if(timestring=="8:0"){
           sendTimeTableMessage(weekday[indiaTime.getDay()] + ", Hour 1: " + timetablearray[n-1][0].message);
         }
         else if(timestring=="8:55"){
           sendTimeTableMessage("Hour 2: " + timetablearray[n-1][1].message);
         }
-        else if(timestring=="09:50"){  
+        else if(timestring=="9:50"){  
           sendTimeTableMessage("Hour 3: " + timetablearray[n-1][2].message);
         }
         else if(timestring=="10:45"){
@@ -193,6 +193,9 @@ const channelgallery = client.channels.cache.get('752834723973300247');
     else if(messagestring === 'go to lab'){
         msg.reply(lab.message);
     }
+    else if(messagestring === 'go to pp'){
+      msg.reply(pp.message);
+  }
     else if(messagestring === 'current class'){
       var currentTime = new Date();
       var ISTOffset = 330;   // IST offset UTC +5:30 
