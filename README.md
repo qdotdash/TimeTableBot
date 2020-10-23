@@ -9,8 +9,7 @@ Moreover, TimeTable bot supports these basic commands.
 
 ## New Features
 
-* Auto join to Google meet links on time
-  Coupling the Google Meet Enhancement Suite extension and a python script to open links by keywords from a specific channel, now meet joining is automated.
+* Auto join to Google meet links on time : Coupling the Google Meet Enhancement Suite extension and a python script to open links by keywords from a specific channel, now meet joining is automated.
 
 ## Basic Commands 
 
