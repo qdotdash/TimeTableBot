@@ -7,6 +7,11 @@ to the desired discord channel. It will also send welcome banners to new users. 
 
 Moreover, TimeTable bot supports these basic commands.
 
+## New Features
+
+* Auto join to Google meet links on time
+  Coupling the Google Meet Enhancement Suite extension and a python script to open links by keywords from a specific channel, now meet joining is automated.
+
 ## Basic Commands 
 
 ```
@@ -36,4 +41,6 @@ current class                            //display the current class
 
 <img src="https://github.com/qdotdash/TimeTableBot/blob/dev/screenshots/currentclass.PNG" width=500>
 <hr>
+
+
 
