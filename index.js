@@ -113,6 +113,7 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
     const channelgallery1 = client.channels.cache.get('769089172921122847');
     const channelgallery2 = client.channels.cache.get('769089200775233576');
     const channelgallery3 = client.channels.cache.get('769089227643682816');
+    const qdotdash2accountchannel = client.channels.cache.get('769102652717924385');
     //const userqdotdash = client.users.cache.get('713837921261846560');
     //const testingchannel = client.channels.cache.get('756397267413368913');
 
@@ -130,9 +131,10 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
 
     function sendTimeTableMessage(m){
       channel.send(m);
-      channelgallery1.send(m + "?pli=1&authuser=1")
-      channelgallery2.send(m + "?pli=1&authuser=2")
-      channelgallery3.send(m + "?pli=1&authuser=3")
+      qdotdash2accountchannel.send(m);
+      channelgallery1.send(m + "?pli=1&authuser=1");
+      channelgallery2.send(m + "?pli=1&authuser=2");
+      channelgallery3.send(m + "?pli=1&authuser=3");
       //testingchannel.send(m);
     }
 
