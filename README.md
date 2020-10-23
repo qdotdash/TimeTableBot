@@ -41,5 +41,8 @@ current class                            //display the current class
 <img src="https://github.com/qdotdash/TimeTableBot/blob/dev/screenshots/currentclass.PNG" width=500>
 <hr>
 
+## Credits
+
+* https://github.com/clearyy/discord-link-opener
 
 
