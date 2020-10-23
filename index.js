@@ -107,11 +107,13 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
 
   cron.schedule("* * * * *", function() {
 
-    /////////////////////////////////////////////CHANNELS TO SEND TIMETABLES AND TESTING CHANNEL
+    /////////////////////////////////////////////CHANNELS TO SEND TIMETABLES AND TESTING CHANNEL AND DM
 
     const channel = client.channels.cache.get('756451422069063711');
-    const channelgallery = client.channels.cache.get('752834723973300247');
-    const userqdotdash = client.users.cache.get('713837921261846560');
+    const channelgallery1 = client.channels.cache.get('769089172921122847');
+    const channelgallery2 = client.channels.cache.get('769089200775233576');
+    const channelgallery3 = client.channels.cache.get('769089227643682816');
+    //const userqdotdash = client.users.cache.get('713837921261846560');
     //const testingchannel = client.channels.cache.get('756397267413368913');
 
     ////////////////////////////////////////////CONVERTING UST TO INDIAN TIME
@@ -128,15 +130,17 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
 
     function sendTimeTableMessage(m){
       channel.send(m);
-      channelgallery.send(m)
+      channelgallery1.send(m + "?pli=1&authuser=1")
+      channelgallery2.send(m + "?pli=1&authuser=2")
+      channelgallery3.send(m + "?pli=1&authuser=3")
       //testingchannel.send(m);
     }
 
      /////////////////////////////////////////FUNCTION TO SEND TIMETABLE MESSAGE TO DM
 
-    function sendTimeTableMessagedm(m){
-      userqdotdash.send(m);
-    }
+    // function sendTimeTableMessagedm(m){
+    //   userqdotdash.send(m);
+    // }
 
 
     ///////////////////////////TIMETABLE SEND TO CHANNEL AND DM
