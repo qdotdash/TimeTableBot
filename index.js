@@ -115,7 +115,7 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
     const channelgallery3 = client.channels.cache.get('769089227643682816');
     const qdotdash2accountchannel = client.channels.cache.get('769102652717924385');
     //const userqdotdash = client.users.cache.get('713837921261846560');
-    //const testingchannel = client.channels.cache.get('756397267413368913');
+    const testingchannel = client.channels.cache.get('756397267413368913');
 
     ////////////////////////////////////////////CONVERTING UST TO INDIAN TIME
 
@@ -135,8 +135,9 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
       channelgallery1.send(m + "?pli=1&authuser=1");
       channelgallery2.send(m + "?pli=1&authuser=2");
       channelgallery3.send(m + "?pli=1&authuser=3");
-      //testingchannel.send(m);
+      // testingchannel.send(timestring);
     }
+
 
      /////////////////////////////////////////FUNCTION TO SEND TIMETABLE MESSAGE TO DM
 
@@ -259,7 +260,7 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
     else if(messagestring === 'current class'){
       var currentTime = new Date();
       var ISTOffset = 330;   // IST offset UTC +5:30 
-      var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
+      var indiaTime = new Date(currentTime.getTime());
       var n = indiaTime.getDay()
       var hours = indiaTime.getHours();
       var minutes = indiaTime.getMinutes();
@@ -293,7 +294,7 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
   else if(messagestring === 'timetable today'){
     var currentTime = new Date();
     var ISTOffset = 330;   // IST offset UTC +5:30 
-    var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
+    var indiaTime = new Date(currentTime.getTime());
     var n = indiaTime.getDay()
     if(n!=6&&n!=0){
       var i;
