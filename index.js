@@ -121,7 +121,7 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
 
     var currentTime = new Date();
     var ISTOffset = 330;   // IST offset UTC +5:30 
-    var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
+    var indiaTime = new Date(currentTime.getTime());
     var n = indiaTime.getDay();
     var timestring = indiaTime.getHours()+":"+indiaTime.getMinutes();
 
