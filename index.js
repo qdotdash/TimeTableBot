@@ -79,7 +79,7 @@ var seminar = {message : "Seminar hour under Ajay James", subject: "Seminar - Aj
 var honors = {message : "Honors : Digital Image Processing(DIP) by Jayasree : https://meet.google.com/rcm-cdom-hwh", subject: "Honors(DIP) - Jayasree", link: "Honors"};
 
 var timetablearray = [[ pp,   ml, project,  seminar, seminar, honors ],
-                      [ cns,  cg,      ml,       pp,     lab,    lab ],
+                      [ cns,  cg,      dip,       pp,     lab,    lab ],
                       [ csa,  cns,     cg,  seminar, seminar,   lab  ],
                       [ dc,   csa,     cg,      ml,     cns,  honors ],
                       [ cg,   dc,     csa,      pp,     dc,   honors ]];
