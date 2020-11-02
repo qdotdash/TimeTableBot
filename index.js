@@ -74,8 +74,8 @@ var dc = {message: "Distributed Computing(DC) by Bisna : http://meet.google.com/
 var dip = {message: "Digital Image Processing(DIP) by Jayasree : https://meet.google.com/rcm-cdom-hwh", subject: "DIP - Jayasree", link: "DIP : https://meet.google.com/rcm-cdom-hwh?pli=1&authuser=2"};
 var lab = {message: "Compiler Design Lab(CDL) by Mumthas and Kala : http://meet.google.com/zvg-pobm-piz", subject: "CD Lab - Mumthas and Kala", link: "Lab : http://meet.google.com/zvg-pobm-piz?pli=1&authuser=2"};
 var pp = {message: "Programming Paradigms in hell(PP) by Salsaraj: https://meet.google.com/jmd-dohm-zmn", subject: "PP - Salsaraj", link: "PP : https://meet.google.com/jmd-dohm-zmn?pli=1&authuser=2"};
-var project = {message : "Project hour under Valsaraj", subject: "Project - Valsaraj", link: "Project hour under Valsaraj"};
-var seminar = {message : "Seminar hour under Ajay James", subject: "Seminar - Ajay James", link: "Project hour under Ajay James"};
+var project = {message : "Project hour under Valsaraj: https://meet.google.com/nfq-tjro-xjc", subject: "Project - Valsaraj", link: "https://meet.google.com/nfq-tjro-xjc"};
+var seminar = {message : "Seminar hour under Ajay James: https://meet.google.com/nfq-tjro-xjc", subject: "Seminar - Ajay James", link: "https://meet.google.com/nfq-tjro-xjc"};
 var honors = {message : "Honors : Digital Image Processing(DIP) by Jayasree : https://meet.google.com/rcm-cdom-hwh", subject: "Honors(DIP) - Jayasree", link: "Honors"};
 
 var timetablearray = [[ pp,   ml, project,  seminar, seminar, honors ],
