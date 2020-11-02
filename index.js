@@ -66,20 +66,20 @@ client.on('ready', () => {
 
 //////////////////////////////////////////////////////////////////////////////////////TIMETABLE VARIABLE INITIALISATIONS
 
-var cns = {message: "Cryptography and Network Security(CNS) by George Mathew : https://meet.google.com/iyc-stko-ycn", subject: "CNS - George Mathew", link: "CNS : https://meet.google.com/iyc-stko-ycn?pli=1&authuser=2"};
-var ml = {message: "Machine Learning(ML) by Ezu : https://meet.google.com/dni-bzrr-war", subject: "ML - Ezu", link: "ML : https://meet.google.com/dni-bzrr-war?pli=1&authuser=2"};
-var cg = {message: "Computer Graphics(CG) by Jayasree : https://meet.google.com/odp-ayya-trc", subject: "CG - Jayasree", link: "CG : https://meet.google.com/odp-ayya-trc?pli=1&authuser=2"};
-var csa = {message: "Computer System Architecture(CSA) by Mumthas : http://meet.google.com/aan-gzyr-xin", subject: "CSA - Mumthas", link: "CSA : http://meet.google.com/aan-gzyr-xin?pli=1&authuser=2"};
-var dc = {message: "Distributed Computing(DC) by Bisna : http://meet.google.com/shm-xotx-ydd", subject: "DC - Bisna", link: "DC : http://meet.google.com/shm-xotx-ydd?pli=1&authuser=2"};
-var dip = {message: "Digital Image Processing(DIP) by Jayasree : https://meet.google.com/rcm-cdom-hwh", subject: "DIP - Jayasree", link: "DIP : https://meet.google.com/rcm-cdom-hwh?pli=1&authuser=2"};
-var lab = {message: "Compiler Design Lab(CDL) by Mumthas and Kala : http://meet.google.com/zvg-pobm-piz", subject: "CD Lab - Mumthas and Kala", link: "Lab : http://meet.google.com/zvg-pobm-piz?pli=1&authuser=2"};
-var pp = {message: "Programming Paradigms in hell(PP) by Salsaraj: https://meet.google.com/jmd-dohm-zmn", subject: "PP - Salsaraj", link: "PP : https://meet.google.com/jmd-dohm-zmn?pli=1&authuser=2"};
-var project = {message : "Project hour under Valsaraj: https://meet.google.com/nfq-tjro-xjc", subject: "Project - Valsaraj", link: "https://meet.google.com/nfq-tjro-xjc"};
-var seminar = {message : "Seminar hour under Ajay James: https://meet.google.com/nfq-tjro-xjc", subject: "Seminar - Ajay James", link: "https://meet.google.com/nfq-tjro-xjc"};
-var honors = {message : "Honors : Digital Image Processing(DIP) by Jayasree : https://meet.google.com/rcm-cdom-hwh", subject: "Honors(DIP) - Jayasree", link: "Honors"};
+var cns = {message: "Cryptography and Network Security(CNS) by George Mathew : https://meet.google.com/iyc-stko-ycn", subject: "CNS - George Mathew", link: "CNS : https://meet.google.com/iyc-stko-ycn?pli=1&authuser=2", code: "cns"};
+var ml = {message: "Machine Learning(ML) by Ezu : https://meet.google.com/dni-bzrr-war", subject: "ML - Ezu", link: "ML : https://meet.google.com/dni-bzrr-war?pli=1&authuser=2", code: "ml"};
+var cg = {message: "Computer Graphics(CG) by Jayasree : https://meet.google.com/odp-ayya-trc", subject: "CG - Jayasree", link: "CG : https://meet.google.com/odp-ayya-trc?pli=1&authuser=2", code: "cg"};
+var csa = {message: "Computer System Architecture(CSA) by Mumthas : http://meet.google.com/aan-gzyr-xin", subject: "CSA - Mumthas", link: "CSA : http://meet.google.com/aan-gzyr-xin?pli=1&authuser=2", code: "csa"};
+var dc = {message: "Distributed Computing(DC) by Bisna : http://meet.google.com/shm-xotx-ydd", subject: "DC - Bisna", link: "DC : http://meet.google.com/shm-xotx-ydd?pli=1&authuser=2", code: "dc"};
+var dip = {message: "Digital Image Processing(DIP) by Jayasree : https://meet.google.com/rcm-cdom-hwh", subject: "DIP - Jayasree", link: "DIP : https://meet.google.com/rcm-cdom-hwh?pli=1&authuser=2", code: "dip"};
+var lab = {message: "Compiler Design Lab(CDL) by Mumthas and Kala : http://meet.google.com/zvg-pobm-piz", subject: "CD Lab - Mumthas and Kala", link: "Lab : http://meet.google.com/zvg-pobm-piz?pli=1&authuser=2", code: "lab"};
+var pp = {message: "Programming Paradigms in hell(PP) by Salsaraj: https://meet.google.com/jmd-dohm-zmn", subject: "PP - Salsaraj", link: "PP : https://meet.google.com/jmd-dohm-zmn?pli=1&authuser=2", code: "pp"};
+var project = {message : "Project hour under Valsaraj: https://meet.google.com/nfq-tjro-xjc", subject: "Project - Valsaraj", link: "https://meet.google.com/nfq-tjro-xjc", code: "sap"};
+var seminar = {message : "Seminar hour under Ajay James: https://meet.google.com/nfq-tjro-xjc", subject: "Seminar - Ajay James", link: "https://meet.google.com/nfq-tjro-xjc", code: "sap"};
+var honors = {message : "Honors : Digital Image Processing(DIP) by Jayasree : https://meet.google.com/rcm-cdom-hwh", subject: "Honors(DIP) - Jayasree", link: "Honors", code: "hnrs"};
 
 var timetablearray = [[ pp,   ml, project,  seminar, seminar, honors ],
-                      [ cns,  cg,      dip,       pp,     lab,    lab ],
+                      [ cns,  cg,      honors,       pp,     lab,    lab ],
                       [ csa,  cns,     cg,  seminar, seminar,   lab  ],
                       [ dc,   csa,     cg,      ml,     cns,  honors ],
                       [ pp,   dc,     csa,      pp,     dc,   honors ]];
@@ -98,7 +98,7 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
 //////////////////////////////////////////////////////////////////////////////////////FUNCTION RETURNING THE HELP COMMAND STRING
 
  function help(){
-   var commandstring = "\n**go to lab** or **go to csa** - display the subject meetlink\n\n**current class** - display current class\n\n**timetable today** - display today's timetable\n\n**timetable help** - display the commands available\n\n**!attendance** - sends a tts attendance alert message\n\n**get me cns** - get the auth=2 URL for the meet link(for me:P)\n\n**go to viva** - get viva links";
+   var commandstring = "\n**go to lab** or **go to csa** - display the subject meetlink\n\n**current class** - display current class\n\n**timetable today** - display today's timetable\n\n**timetable help** - display the commands available\n\n**!attendance** - sends a tts attendance alert message\n\n**get me cns** - get the auth=2 URL for the meet link(for me:P)\n\n**go to viva** - get viva links\n\n**timetable all** - print complete timetable";
    return commandstring;
  }
 
@@ -207,6 +207,28 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
 
 //////////////////////////////////////////////////////////////////////////////////////SENDING REPLIES TO MESSAGES
   client.on('message', msg => {
+
+
+    /////////////////////////////////////////FUNCTION TO PRINT COMPLETE TIMETABLE
+
+    function printTimeTable(){
+      var ttstring = '\n';
+      for(let i=0; i<5;i++){
+    
+          ttstring += weekday[i+1] + ":\t";
+
+        for(let j=0; j<6; j++){
+          ttstring += timetablearray[i][j].code.toUpperCase();
+          if(j!=5)
+            ttstring +=  " --- ";
+        }
+        if(i!=4){
+          ttstring += "\n\n";
+        }
+      }
+      return ttstring;
+    }
+
     var messagestring = msg.content.toLowerCase();
     if (messagestring === 'go to cns') {
       msg.reply(cns.message);
@@ -258,6 +280,9 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
     }
     else if(messagestring === '!attendance'){
       msg.reply("attendance alert, attendance alert, attendance alert", {tts: true});
+    }
+    else if(messagestring === 'timetable all'){
+      msg.reply(printTimeTable());
     }
     else if(messagestring === 'current class'){
       var currentTime = new Date();
