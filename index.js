@@ -207,7 +207,12 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
 
 //////////////////////////////////////////////////////////////////////////////////////SENDING REPLIES TO MESSAGES
   client.on('message', msg => {
-
+    var currentTime = new Date();
+    var ISTOffset = 330;   // IST offset UTC +5:30 
+    var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
+    var n = indiaTime.getDay()
+    var hours = indiaTime.getHours();
+    var minutes = indiaTime.getMinutes();
 
     /////////////////////////////////////////FUNCTION TO PRINT COMPLETE TIMETABLE
 
@@ -215,12 +220,22 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
       var ttstring = '\n';
       for(let i=0; i<5;i++){
     
+        if(i+1==n)
+          ttstring += "**" + weekday[i+1] + "**" + ":\t";
+        else
           ttstring += weekday[i+1] + ":\t";
-
+          
         for(let j=0; j<6; j++){
-          ttstring += timetablearray[i][j].code.toUpperCase();
-          if(j!=5)
-            ttstring +=  " --- ";
+          if(i+1==n){
+            ttstring += "**" + timetablearray[i][j].code.toUpperCase() + "**";
+          }
+          else{
+            ttstring += timetablearray[i][j].code.toUpperCase();
+          }
+          if(j!=5){
+              ttstring += " --- ";
+          }
+            
         }
         if(i!=4){
           ttstring += "\n\n";
@@ -285,12 +300,6 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
       msg.reply(printTimeTable());
     }
     else if(messagestring === 'current class'){
-      var currentTime = new Date();
-      var ISTOffset = 330;   // IST offset UTC +5:30 
-      var indiaTime = new Date(currentTime.getTime() + (ISTOffset)*60000);
-      var n = indiaTime.getDay()
-      var hours = indiaTime.getHours();
-      var minutes = indiaTime.getMinutes();
       if(n!=6&&n!=0){
         if(tominutes(hours, minutes)>tominutes(8, 30)&&tominutes(hours, minutes)<=tominutes(9,30)){
           msg.reply("Current class : " + timetablearray[n-1][0].message);
