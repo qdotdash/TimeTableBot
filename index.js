@@ -73,7 +73,7 @@ var csa = {message: "Computer System Architecture(CSA) by Mumthas : http://meet.
 var dc = {message: "Distributed Computing(DC) by Bisna : http://meet.google.com/shm-xotx-ydd", subject: "DC - Bisna", link: "DC : http://meet.google.com/shm-xotx-ydd?pli=1&authuser=2", code: "dc"};
 var dip = {message: "Digital Image Processing(DIP) by Jayasree : https://meet.google.com/rcm-cdom-hwh", subject: "DIP - Jayasree", link: "DIP : https://meet.google.com/rcm-cdom-hwh?pli=1&authuser=2", code: "dip"};
 var lab = {message: "Compiler Design Lab(CDL) by Mumthas and Kala : http://meet.google.com/zvg-pobm-piz", subject: "CD Lab - Mumthas and Kala", link: "Lab : http://meet.google.com/zvg-pobm-piz?pli=1&authuser=2", code: "lab"};
-var pp = {message: "Programming Paradigms in hell(PP) by Salsaraj: https://meet.google.com/jmd-dohm-zmn", subject: "PP - Salsaraj", link: "PP : https://meet.google.com/jmd-dohm-zmn?pli=1&authuser=2", code: "pp"};
+var pp = {message: "Programming Paradigms in hell(PP) by Salsaraj: https://meet.google.com/vdd-thdj-dxr", subject: "PP - Salsaraj", link: "PP : https://meet.google.com/jmd-dohm-zmn?pli=1&authuser=2", code: "pp"};
 var project = {message : "Project hour under Valsaraj: https://meet.google.com/nfq-tjro-xjc", subject: "Project - Valsaraj", link: "https://meet.google.com/nfq-tjro-xjc", code: "sap"};
 var seminar = {message : "Seminar hour under Ajay James: https://meet.google.com/nfq-tjro-xjc", subject: "Seminar - Ajay James", link: "https://meet.google.com/nfq-tjro-xjc", code: "sap"};
 var honors = {message : "Honors : Digital Image Processing(DIP) by Jayasree : https://meet.google.com/rcm-cdom-hwh", subject: "Honors(DIP) - Jayasree", link: "Honors", code: "hnrs"};
