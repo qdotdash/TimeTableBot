@@ -78,7 +78,7 @@ var project = {message : "Project hour under Valsaraj: https://meet.google.com/n
 var seminar = {message : "Seminar hour under Ajay James: https://meet.google.com/nfq-tjro-xjc", subject: "Seminar - Ajay James", link: "https://meet.google.com/nfq-tjro-xjc", code: "sap"};
 var honors = {message : "Honors : Digital Image Processing(DIP) by Jayasree : https://meet.google.com/rcm-cdom-hwh", subject: "Honors(DIP) - Jayasree", link: "Honors", code: "hnrs"};
 
-var timetablearray = [[ pp,   ml, project,  seminar, seminar, honors ],
+var timetablearray = [[ pp,   ml, cg,  seminar, seminar, honors ],
                       [ cns,  cg,      honors,       pp,     lab,    lab ],
                       [ csa,  cns,     pp,  seminar, seminar,   lab  ],
                       [ dc,   csa,     cg,      ml,     cns,  honors ],
