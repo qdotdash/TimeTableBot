@@ -80,7 +80,7 @@ var honors = {message : "Honors : Digital Image Processing(DIP) by Jayasree : ht
 
 var timetablearray = [[ pp,   ml, project,  seminar, seminar, honors ],
                       [ cns,  cg,      honors,       pp,     lab,    lab ],
-                      [ csa,  cns,     cg,  seminar, seminar,   lab  ],
+                      [ csa,  cns,     pp,  seminar, seminar,   lab  ],
                       [ dc,   csa,     cg,      ml,     cns,  honors ],
                       [ pp,   dc,     csa,      pp,     dc,   honors ]];
 
