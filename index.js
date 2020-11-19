@@ -290,6 +290,9 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
     else if(messagestring === 'get me pp'){
     msg.reply(pp.link);
     }
+    else if(messagestring === 'go to sap'){
+      msg.reply(seminar.message);
+    }
     else if(messagestring === 'go to viva'){
       msg.reply("\nBatch 1 (1-22) : http://meet.google.com/xhc-ddjc-tpx\nBatch 2 (23-47) : http://meet.google.com/rmk-imxy-jee\nBatch 2 (48-68) : http://meet.google.com/rmk-imxy-jee");
     }
