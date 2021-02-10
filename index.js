@@ -1,6 +1,10 @@
 const Discord = require('discord.js');
 const Canvas = require('canvas');
 
+// var TelegramBot = require('node-telegram-bot-api');
+// var token = '1591437042:AAGvUjQdo4_pUCI0_KWJktfHXS4XyPlxQ2g'
+// var bot = new TelegramBot(token, {polling:true});
+
 const client = new Discord.Client();
 
 //////////////////////////////////////////////////////////////////////////////////////TESTING WELCOME BANNER FUNCTIONALITY
@@ -185,6 +189,11 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
           sendTimeTableMessage("Hour 2: " + timetablearray[n-1][1].message);
           sendTimeTableMessagedm("Hour 2: " + timetablearray[n-1][1].link);
 	      }
+	      else if(timestring=="11:20"){
+	      var theend = "So, hope you all are fine, All the best for GATE and for the exams. May you all get to meet under the arch again. Good bye :)"
+          sendTimeTableMessage(theend);
+          sendTimeTableMessagedm(theend);
+	      }
 	      else if(timestring=="10:30"){  
           sendTimeTableMessage("Hour 3: " + timetablearray[n-1][2].message); 
           sendTimeTableMessagedm("Hour 3: " + timetablearray[n-1][2].link);
@@ -355,4 +364,5 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
 //////////////////////////////////////////////////////////////////////////////////////AUTHENTICATION
 
 
-client.login(process.env.TOKEN);
+client.login("NzU2MDQ3OTQxNzIxOTE1NDQz.X2MKgw.5G7syI1oVLE5ve_Q_LTsBQpMFoE");
+// client.login(process.env.TOKEN);
