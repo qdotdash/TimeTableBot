@@ -189,8 +189,8 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
           sendTimeTableMessage("Hour 2: " + timetablearray[n-1][1].message);
           sendTimeTableMessagedm("Hour 2: " + timetablearray[n-1][1].link);
 	      }
-	      else if(timestring=="11:20"){
-	      var theend = "So, hope you all are fine, All the best for GATE and for the exams. May you all get to meet under the arch again. Good bye :)"
+	      else if(timestring=="11:25"){
+	      var theend = "So, hope you all are fine, All the best for GATE and for the exams. May you all get to meet under the arch again. Good bye :)";
           sendTimeTableMessage(theend);
           sendTimeTableMessagedm(theend);
 	      }
@@ -364,5 +364,5 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
 //////////////////////////////////////////////////////////////////////////////////////AUTHENTICATION
 
 
-client.login("NzU2MDQ3OTQxNzIxOTE1NDQz.X2MKgw.5G7syI1oVLE5ve_Q_LTsBQpMFoE");
-// client.login(process.env.TOKEN);
+// client.login("NzU2MDQ3OTQxNzIxOTE1NDQz.X2MKgw.hRap0_3q72Wuqqwfzmj6tIwMOtI");
+client.login(process.env.TOKEN);
