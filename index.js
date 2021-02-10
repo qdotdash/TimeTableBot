@@ -362,7 +362,4 @@ var weekday = ["Sunday",  "Monday",  "Tuesday",  "Wednesday", "Thursday",  "Frid
   });
 
 //////////////////////////////////////////////////////////////////////////////////////AUTHENTICATION
-
-
-// client.login("NzU2MDQ3OTQxNzIxOTE1NDQz.X2MKgw.hRap0_3q72Wuqqwfzmj6tIwMOtI");
 client.login(process.env.TOKEN);
