@@ -126,7 +126,7 @@ var dm = {
 
 var timetablearray = [
   [project, nde, es, pis, ai, project],
-  [project, es, nde, project, dm, project],
+  [project, es, nde, pis, dm, project],
   [pis, dm, es, nde, ai, project],
   [project, dm, pis, project, ai, project],
 ];
