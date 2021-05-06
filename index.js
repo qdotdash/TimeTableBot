@@ -151,7 +151,7 @@ function tominutes(h, m) {
 
 function help() {
   var commandstring =
-    "\n**go to es** or **go to pis** - display the subject meetlink\n\n**current class** - display current class\n\n**timetable today** - display today's timetable\n\n**timetable help** - display the commands available\n\n**!attendance** - sends a tts attendance alert message\n\n**get me cns** - get the auth=2 URL for the meet link(for me:P)\n\n**go to viva** - get viva links\n\n**timetable all** - print complete timetable";
+    "\n**go to es** or **go to pis** - display the subject meetlink\n\n**current class** - display current class\n\n**timetable today** - display today's timetable\n\n**timetable help** - display available commands\n\n**!attendance** - sends a tts attendance alert message\n\n**get me cns** - get the auth=2 URL for the meet link(for me:P)\n\n**go to viva** - get viva links\n\n**timetable all** - print complete timetable";
   return commandstring;
 }
 
